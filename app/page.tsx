@@ -3,7 +3,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 export default function Home() {
-  const projects = [
+  const projects: ProjectCardProps[] = [
     {
       id: 'gods-eye',
       title: 'God\'s Eye',
