@@ -1,25 +1,22 @@
 'use client'
 
 import { useEffect } from 'react'
-
-import { ReactNode } from 'react'
-
-interface ModalContent {
-  title: string
-  tagline: string
-  body: string
-  visual?: ReactNode
-  snippet?: string
-  snippetLabel?: string
-  footer: string
-  footerType: 'nda' | 'live' | 'research' | 'partner'
-}
-
 import { GodsEyeVisual } from './visuals/GodsEyeVisual'
 import { LatticeVisual } from './visuals/LatticeVisual'
 import { GhostMurmurVisual } from './visuals/GhostMurmurVisual'
 import { FoundryVisual } from './visuals/FoundryVisual'
 import { EmberVisual } from './visuals/EmberVisual'
+import { MiroFishVisual } from './visuals/MiroFishVisual'
+
+interface ModalContent {
+  title: string
+  tagline: string
+  body: string
+  snippet?: string
+  snippetLabel?: string
+  footer: string
+  footerType: 'nda' | 'live' | 'research' | 'partner'
+}
 
 interface ProjectModalProps {
   content: ModalContent
@@ -33,6 +30,7 @@ const visualComponents: Record<string, () => JSX.Element> = {
   'ghost-murmur': GhostMurmurVisual,
   'foundry-work': FoundryVisual,
   'ember': EmberVisual,
+  'mirofish': MiroFishVisual,
 }
 
 const footerStyles = {
@@ -54,6 +52,8 @@ export function ProjectModal({ content, projectId, onClose }: ProjectModalProps)
       document.body.style.overflow = ''
     }
   }, [onClose])
+
+  const VisualComponent = projectId ? visualComponents[projectId] : null
 
   return (
     <div
@@ -77,9 +77,9 @@ export function ProjectModal({ content, projectId, onClose }: ProjectModalProps)
 
         {/* Body */}
         <div className="p-6 space-y-5">
-          {projectId && visualComponents[projectId] && (
+          {VisualComponent && (
             <div className="rounded-lg overflow-hidden border border-gray-800 bg-black p-3">
-              {visualComponents[projectId]({})}
+              <VisualComponent />
             </div>
           )}
 

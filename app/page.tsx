@@ -57,6 +57,15 @@ export default function Home() {
       onLearnMore: () => setActiveModal('ember')
     },
     {
+      id: 'mirofish',
+      title: 'MiroFish',
+      tagline: 'Swarm Intelligence Market Prediction',
+      description: 'Multi-agent swarm simulation for market sentiment prediction. Distributed consensus protocols modeling investor behavior and collective decision-making.',
+      tags: ['Swarm Intelligence', 'Market Analysis', 'Prediction'],
+      status: 'Production',
+      onLearnMore: () => setActiveModal('mirofish')
+    },
+    {
       id: 'electrascan',
       title: 'ElectraScan',
       tagline: 'AI Cost Estimating SaaS',

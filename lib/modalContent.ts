@@ -131,4 +131,32 @@ const swarm = new AgentSwarm({
     footer: 'Live product. Visit electrascan.io for details.',
     footerType: 'live',
   },
+  'mirofish': {
+    title: 'MiroFish',
+    tagline: 'Swarm Intelligence Market Prediction',
+    body: 'Multi-agent swarm simulation predicting market sentiment and investor behavior in response to macro events, earnings releases, and market catalysts. Uses distributed consensus protocols and information aggregation to model collective decision-making patterns.',
+    snippet: `// Market sentiment prediction
+const swarm = new MarketSwarm({
+  agents: 128,
+  market: 'equity',
+  timeframe: '5m-1d',
+  learning_rate: 0.02
+})
+
+const prediction = await swarm.predict({
+  catalyst: 'fed-rate-decision',
+  confidence_threshold: 0.7,
+  historical_context: true
+})
+
+return {
+  sentiment: prediction.sentiment,  // bullish|bearish|neutral
+  confidence: 0.82,
+  target_move: '+2.3%',
+  affected_sectors: ['tech', 'financials']
+}`,
+    snippetLabel: 'TypeScript – Sentiment Engine',
+    footer: 'Production simulation engine. Real-time market analysis.',
+    footerType: 'partner',
+  },
 }
