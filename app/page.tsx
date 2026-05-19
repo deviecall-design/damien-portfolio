@@ -1,8 +1,15 @@
+'use client'
+
+import { useState } from 'react'
 import { ProjectCard, type ProjectCardProps } from '@/components/ProjectCard'
+import { ProjectModal } from '@/components/ProjectModal'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { modalContents } from '@/lib/modalContent'
 
 export default function Home() {
+  const [activeModal, setActiveModal] = useState<string | null>(null)
+
   const projects: ProjectCardProps[] = [
     {
       id: 'gods-eye',
@@ -11,7 +18,7 @@ export default function Home() {
       description: 'Real-time sensor orchestration and distributed intelligence fusion across heterogeneous networks.',
       tags: ['Distributed Systems', 'Real-time Processing', 'Sensor Fusion'],
       status: 'Production',
-      link: '#gods-eye'
+      onLearnMore: () => setActiveModal('gods-eye')
     },
     {
       id: 'lattice-integration',
@@ -20,7 +27,7 @@ export default function Home() {
       description: 'Custom ontology and autonomous coordination layer built on Anduril\'s C2 platform. Advanced AIP orchestration.',
       tags: ['Anduril', 'Autonomous Systems', 'C2 Integration'],
       status: 'Active',
-      link: '#lattice'
+      onLearnMore: () => setActiveModal('lattice-integration')
     },
     {
       id: 'ghost-murmur',
@@ -29,7 +36,7 @@ export default function Home() {
       description: 'Distributed sensor mesh for real-time physiological monitoring. Research initiative in partnership with leading medical institutions.',
       tags: ['AI Research', 'Healthcare Tech', 'Distributed Sensors'],
       status: 'Research',
-      link: '#ghost-murmur'
+      onLearnMore: () => setActiveModal('ghost-murmur')
     },
     {
       id: 'foundry-work',
@@ -38,7 +45,7 @@ export default function Home() {
       description: 'Custom ontology design and Palantir AIP integrations. Data model architecture for complex operational environments.',
       tags: ['Palantir', 'OSDK', 'Data Architecture'],
       status: 'Production',
-      link: '#foundry'
+      onLearnMore: () => setActiveModal('foundry-work')
     },
     {
       id: 'ember',
@@ -47,7 +54,7 @@ export default function Home() {
       description: 'Advanced swarm intelligence and distributed AI agent coordination. Autonomous task execution and knowledge sharing.',
       tags: ['AI Agents', 'Swarm Intelligence', 'Orchestration'],
       status: 'Production',
-      link: '#ember'
+      onLearnMore: () => setActiveModal('ember')
     },
     {
       id: 'electrascan',
@@ -59,6 +66,8 @@ export default function Home() {
       link: 'https://electrascan.io'
     }
   ]
+
+  const activeContent = activeModal ? modalContents[activeModal] : null
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
@@ -82,6 +91,13 @@ export default function Home() {
       </section>
 
       <Footer />
+
+      {activeContent && (
+        <ProjectModal
+          content={activeContent}
+          onClose={() => setActiveModal(null)}
+        />
+      )}
     </main>
   )
 }

@@ -7,7 +7,8 @@ export interface ProjectCardProps {
   description: string
   tags: string[]
   status: 'Production' | 'Active' | 'Research' | 'Commercial'
-  link: string
+  link?: string
+  onLearnMore?: () => void
 }
 
 const statusColors = {
@@ -24,11 +25,18 @@ export function ProjectCard({
   tags,
   status,
   link,
+  onLearnMore,
 }: ProjectCardProps) {
-  const isExternal = link.startsWith('http')
+  const isExternal = link && link.startsWith('http')
   
-  const content = (
-    <div className="h-full border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors bg-gradient-to-br from-gray-900 to-black group cursor-pointer">
+  const handleClick = () => {
+    if (onLearnMore) {
+      onLearnMore()
+    }
+  }
+
+  const baseContent = (
+    <div className="h-full border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-all bg-gradient-to-br from-gray-900 to-black group cursor-pointer">
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
           <h3 className="text-xl font-bold mb-2 group-hover:text-gray-300 transition-colors">
@@ -47,7 +55,7 @@ export function ProjectCard({
         {description}
       </p>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 mb-6">
         {tags.map((tag) => (
           <span key={tag} className="text-xs px-2 py-1 rounded bg-gray-800 text-gray-300 border border-gray-700">
             {tag}
@@ -55,7 +63,7 @@ export function ProjectCard({
         ))}
       </div>
 
-      <div className="mt-6 text-gray-500 group-hover:text-gray-400 transition-colors text-sm">
+      <div className="text-gray-500 group-hover:text-gray-400 transition-colors text-sm">
         {isExternal ? 'Visit →' : 'Learn more →'}
       </div>
     </div>
@@ -64,14 +72,14 @@ export function ProjectCard({
   if (isExternal) {
     return (
       <a href={link} target="_blank" rel="noopener noreferrer">
-        {content}
+        {baseContent}
       </a>
     )
   }
 
   return (
-    <Link href={link}>
-      {content}
-    </Link>
+    <button onClick={handleClick} className="w-full text-left">
+      {baseContent}
+    </button>
   )
 }
