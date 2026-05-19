@@ -92,9 +92,10 @@ export default function Home() {
 
       <Footer />
 
-      {activeContent && (
+      {activeContent && activeModal && (
         <ProjectModal
           content={activeContent}
+          projectId={activeModal}
           onClose={() => setActiveModal(null)}
         />
       )}

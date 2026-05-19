@@ -2,19 +2,37 @@
 
 import { useEffect } from 'react'
 
+import { ReactNode } from 'react'
+
 interface ModalContent {
   title: string
   tagline: string
   body: string
+  visual?: ReactNode
   snippet?: string
   snippetLabel?: string
   footer: string
   footerType: 'nda' | 'live' | 'research' | 'partner'
 }
 
+import { GodsEyeVisual } from './visuals/GodsEyeVisual'
+import { LatticeVisual } from './visuals/LatticeVisual'
+import { GhostMurmurVisual } from './visuals/GhostMurmurVisual'
+import { FoundryVisual } from './visuals/FoundryVisual'
+import { EmberVisual } from './visuals/EmberVisual'
+
 interface ProjectModalProps {
   content: ModalContent
+  projectId?: string
   onClose: () => void
+}
+
+const visualComponents: Record<string, () => JSX.Element> = {
+  'gods-eye': GodsEyeVisual,
+  'lattice-integration': LatticeVisual,
+  'ghost-murmur': GhostMurmurVisual,
+  'foundry-work': FoundryVisual,
+  'ember': EmberVisual,
 }
 
 const footerStyles = {
@@ -24,7 +42,7 @@ const footerStyles = {
   partner: 'border-blue-800 bg-blue-950 text-blue-300',
 }
 
-export function ProjectModal({ content, onClose }: ProjectModalProps) {
+export function ProjectModal({ content, projectId, onClose }: ProjectModalProps) {
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
@@ -59,6 +77,12 @@ export function ProjectModal({ content, onClose }: ProjectModalProps) {
 
         {/* Body */}
         <div className="p-6 space-y-5">
+          {projectId && visualComponents[projectId] && (
+            <div className="rounded-lg overflow-hidden border border-gray-800 bg-black p-3">
+              {visualComponents[projectId]({})}
+            </div>
+          )}
+
           <p className="text-gray-300 leading-relaxed">{content.body}</p>
 
           {content.snippet && (
