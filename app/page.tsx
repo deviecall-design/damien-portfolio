@@ -72,7 +72,7 @@ export default function Home() {
       description: 'Machine learning-powered cost estimation for electrical contracting. Live commercial product for Australian market.',
       tags: ['SaaS', 'ML Estimating', 'B2B'],
       status: 'Commercial',
-      link: 'https://electrascan.io'
+      onLearnMore: () => setActiveModal('electrascan')
     }
   ]
 
