@@ -11,7 +11,7 @@ export function Header() {
             </Link>
             <nav className="hidden md:flex gap-8 text-sm text-gray-400">
               <a href="/work" className="hover:text-white transition-colors">Work</a>
-              <a href="#" className="hover:text-white transition-colors">Research</a>
+              <a href="/research" className="hover:text-white transition-colors">Research</a>
             </nav>
           </div>
           <div className="flex items-center gap-4 text-sm">
