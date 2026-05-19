@@ -24,7 +24,7 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4">Connect</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="https://linkedin.com/in/damien-callaghan" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a></li>
+              <li><a href="https://www.linkedin.com/in/damiencallaghan/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a></li>
               <li><a href="https://github.com/deviecall-design" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a></li>
               <li><a href="mailto:damien@deviecall.com" className="hover:text-white transition-colors">Email</a></li>
             </ul>

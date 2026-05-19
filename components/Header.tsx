@@ -15,7 +15,7 @@ export function Header() {
             </nav>
           </div>
           <div className="flex items-center gap-4 text-sm">
-            <a href="https://linkedin.com/in/damien-callaghan" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/damiencallaghan/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               LinkedIn
             </a>
             <a href="https://github.com/deviecall-design" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
