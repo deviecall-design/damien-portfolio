@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
   id: string
   title: string
   tagline: string

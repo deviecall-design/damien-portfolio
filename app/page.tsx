@@ -1,4 +1,4 @@
-import { ProjectCard } from '@/components/ProjectCard'
+import { ProjectCard, type ProjectCardProps } from '@/components/ProjectCard'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
