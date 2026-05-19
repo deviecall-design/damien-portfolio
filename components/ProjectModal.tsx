@@ -7,6 +7,7 @@ import { GhostMurmurVisual } from './visuals/GhostMurmurVisual'
 import { FoundryVisual } from './visuals/FoundryVisual'
 import { EmberVisual } from './visuals/EmberVisual'
 import { MiroFishVisual } from './visuals/MiroFishVisual'
+import { ElectraScanVisual } from './visuals/ElectraScanVisual'
 
 interface ModalContent {
   title: string
@@ -31,6 +32,7 @@ const visualComponents: Record<string, () => JSX.Element> = {
   'foundry-work': FoundryVisual,
   'ember': EmberVisual,
   'mirofish': MiroFishVisual,
+  'electrascan': ElectraScanVisual,
 }
 
 const footerStyles = {
