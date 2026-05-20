@@ -58,6 +58,7 @@ export default function Home() {
       description: 'Advanced swarm intelligence and distributed AI agent coordination. Autonomous task execution and knowledge sharing.',
       tags: ['AI Agents', 'Swarm Intelligence', 'Orchestration'],
       status: 'Production',
+      image: '/press-images/ember-hero.jpg',
       onLearnMore: () => setActiveModal('ember')
     },
     {
