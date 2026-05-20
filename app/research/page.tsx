@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import Link from 'next/link'
 
 interface ResearchItem {
   id: string
@@ -8,6 +9,7 @@ interface ResearchItem {
   tags: string[]
   date: string
   status: 'draft' | 'in-review' | 'published' | 'research'
+  link?: string
 }
 
 const research: ResearchItem[] = [
@@ -19,6 +21,7 @@ const research: ResearchItem[] = [
     tags: ['Healthcare', 'Distributed Systems', 'Edge AI', 'Medical'],
     date: '2026 (In Progress)',
     status: 'research',
+    link: '/#ghost-murmur',
   },
   {
     id: 'mirofish',
@@ -28,6 +31,7 @@ const research: ResearchItem[] = [
     tags: ['Markets', 'Swarm AI', 'Prediction', 'Consensus'],
     date: '2026 (Research)',
     status: 'research',
+    link: '/#mirofish',
   },
   {
     id: 'lattice-arch',
@@ -37,6 +41,7 @@ const research: ResearchItem[] = [
     tags: ['Autonomy', 'Edge Computing', 'C2 Systems', 'Architecture'],
     date: '2026 (Research)',
     status: 'research',
+    link: '/#lattice-integration',
   },
   {
     id: 'gods-eye',
@@ -46,6 +51,7 @@ const research: ResearchItem[] = [
     tags: ['Sensors', 'Fusion', 'Real-time', 'Distributed'],
     date: '2026 (Research)',
     status: 'research',
+    link: '/#gods-eye',
   },
 ]
 
@@ -54,36 +60,39 @@ const publications = [
     title: 'Ghost Murmur: Applied Cardiac AI Research',
     venue: 'Victor Chang Cardiac Research Institute — Partnership Initiative',
     date: '2026',
+    link: '/#ghost-murmur',
   },
   {
     title: 'MiroFish Swarm Sentiment Engine',
     venue: 'Internal Research — Market Prediction Systems',
     date: '2026',
+    link: '/#mirofish',
   },
   {
     title: 'Autonomous Coordination Patterns on Anduril Lattice',
     venue: 'Defense Tech Research — Edge Autonomy',
     date: '2026',
+    link: '/#lattice-integration',
   },
 ]
 
 const statusBadge = {
-  draft: 'bg-gray-900 text-gray-400 border-gray-700',
-  'in-review': 'bg-yellow-950 text-yellow-400 border-yellow-800',
-  published: 'bg-green-950 text-green-400 border-green-800',
-  research: 'bg-blue-950 text-blue-400 border-blue-800',
+  draft: 'bg-gray-100 text-gray-800 border-gray-300',
+  'in-review': 'bg-yellow-100 text-yellow-800 border-yellow-300',
+  published: 'bg-green-100 text-green-800 border-green-300',
+  research: 'bg-blue-100 text-blue-800 border-blue-300',
 }
 
 export default function ResearchPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white flex flex-col">
+    <main className="min-h-screen bg-white text-gray-900 flex flex-col">
       <Header />
 
       <section className="flex-1 px-4 sm:px-8 lg:px-16 py-20 max-w-5xl mx-auto w-full">
         {/* Hero */}
         <div className="mb-20">
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">Research</h1>
-          <p className="text-xl text-gray-400 max-w-2xl">
+          <p className="text-xl text-gray-600 max-w-2xl">
             Applied research and investigations into distributed systems, autonomous coordination, and advanced AI architectures.
           </p>
         </div>
@@ -93,14 +102,14 @@ export default function ResearchPage() {
           {research.map((item) => (
             <div
               key={item.id}
-              className="group p-6 border border-gray-800 rounded-lg hover:border-gray-700 transition-colors bg-gradient-to-br from-gray-900/50 to-black"
+              className="group p-6 border border-gray-200 rounded-lg hover:border-gray-400 hover:shadow-md transition-all bg-gradient-to-br from-gray-50 to-white"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-gray-300 transition-colors">
+                  <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-gray-700 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-400 leading-relaxed mb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
                     {item.abstract}
                   </p>
                 </div>
@@ -118,7 +127,7 @@ export default function ResearchPage() {
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-2 py-1 rounded bg-gray-800 text-gray-300 border border-gray-700"
+                      className="text-xs px-2 py-1 rounded bg-gray-100 text-gray-600 border border-gray-200"
                     >
                       {tag}
                     </span>
@@ -126,12 +135,16 @@ export default function ResearchPage() {
                 </div>
                 <div className="flex items-center gap-3 ml-4">
                   <span className="text-xs text-gray-600">{item.date}</span>
-                  <a
-                    href="#"
-                    className="text-gray-500 hover:text-white text-sm transition-colors"
-                  >
-                    Read →
-                  </a>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      className="text-gray-600 hover:text-gray-900 text-sm transition-colors font-semibold"
+                    >
+                      Read →
+                    </a>
+                  ) : (
+                    <span className="text-gray-400 text-sm">Coming soon</span>
+                  )}
                 </div>
               </div>
             </div>
@@ -140,20 +153,26 @@ export default function ResearchPage() {
 
         {/* Publication List */}
         <div>
-          <h2 className="text-2xl font-bold mb-8 pb-4 border-b border-gray-800">
+          <h2 className="text-2xl font-bold mb-8 pb-4 border-b border-gray-200">
             Publications & Engagements
           </h2>
 
           <div className="space-y-4">
             {publications.map((pub, i) => (
-              <div key={i} className="flex items-start justify-between py-4 border-b border-gray-900 hover:border-gray-800 transition-colors">
+              <div key={i} className="flex items-start justify-between py-4 border-b border-gray-100 hover:border-gray-300 transition-colors">
                 <div className="flex-1">
-                  <p className="font-semibold text-sm text-gray-300 mb-1">
-                    {pub.title}
+                  <p className="font-semibold text-sm text-gray-900 mb-1">
+                    {pub.link ? (
+                      <a href={pub.link} className="hover:text-gray-700 transition-colors">
+                        {pub.title}
+                      </a>
+                    ) : (
+                      pub.title
+                    )}
                   </p>
                   <p className="text-xs text-gray-600">{pub.venue}</p>
                 </div>
-                <p className="text-xs text-gray-700 font-mono ml-4 whitespace-nowrap">
+                <p className="text-xs text-gray-600 font-mono ml-4 whitespace-nowrap">
                   {pub.date}
                 </p>
               </div>
@@ -162,7 +181,7 @@ export default function ResearchPage() {
         </div>
 
         {/* Footer note */}
-        <div className="mt-16 pt-8 border-t border-gray-800">
+        <div className="mt-16 pt-8 border-t border-gray-200">
           <p className="text-gray-600 text-xs">
             Additional research available upon request. NDA agreements in place for restricted content.
           </p>
