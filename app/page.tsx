@@ -28,6 +28,7 @@ export default function Home() {
       description: 'Custom ontology and autonomous coordination layer built on Anduril\'s C2 platform. Advanced AIP orchestration.',
       tags: ['Anduril', 'Autonomous Systems', 'C2 Integration'],
       status: 'Active',
+      image: '/press-images/menace-1-container.jpg',
       onLearnMore: () => setActiveModal('lattice-integration')
     },
     {
