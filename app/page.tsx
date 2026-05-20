@@ -79,7 +79,7 @@ export default function Home() {
   const activeContent = activeModal ? modalContents[activeModal] : null
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white">
+    <main className="min-h-screen bg-white text-gray-900">
       <Header />
       
       <section className="px-4 sm:px-8 lg:px-16 py-20 max-w-6xl mx-auto">
@@ -87,7 +87,7 @@ export default function Home() {
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
             Advanced AI Systems <br />& Distributed Architecture
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl">
+          <p className="text-xl text-gray-600 max-w-2xl">
             Enterprise-grade platforms for autonomous coordination, real-time intelligence, and distributed AI orchestration.
           </p>
         </div>

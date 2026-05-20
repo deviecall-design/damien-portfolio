@@ -12,10 +12,10 @@ export interface ProjectCardProps {
 }
 
 const statusColors = {
-  Production: 'bg-emerald-900 text-emerald-200',
-  Active: 'bg-blue-900 text-blue-200',
-  Research: 'bg-purple-900 text-purple-200',
-  Commercial: 'bg-amber-900 text-amber-200',
+  Production: 'bg-emerald-100 text-emerald-800',
+  Active: 'bg-blue-100 text-blue-800',
+  Research: 'bg-purple-100 text-purple-800',
+  Commercial: 'bg-amber-100 text-amber-800',
 }
 
 export function ProjectCard({
@@ -36,13 +36,13 @@ export function ProjectCard({
   }
 
   const baseContent = (
-    <div className="h-full border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-all bg-gradient-to-br from-gray-900 to-black group cursor-pointer">
+    <div className="h-full border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-all bg-gradient-to-br from-gray-50 to-white group cursor-pointer">
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
-          <h3 className="text-xl font-bold mb-2 group-hover:text-gray-300 transition-colors">
+          <h3 className="text-xl font-bold mb-2 group-hover:text-gray-700 transition-colors">
             {title}
           </h3>
-          <p className="text-sm text-gray-400 mb-4">
+          <p className="text-sm text-gray-600 mb-4">
             {tagline}
           </p>
         </div>
@@ -51,19 +51,19 @@ export function ProjectCard({
         </span>
       </div>
 
-      <p className="text-gray-300 text-sm leading-relaxed mb-4">
+      <p className="text-gray-700 text-sm leading-relaxed mb-4">
         {description}
       </p>
 
       <div className="flex flex-wrap gap-2 mb-6">
         {tags.map((tag) => (
-          <span key={tag} className="text-xs px-2 py-1 rounded bg-gray-800 text-gray-300 border border-gray-700">
+          <span key={tag} className="text-xs px-2 py-1 rounded bg-gray-100 text-gray-700 border border-gray-300">
             {tag}
           </span>
         ))}
       </div>
 
-      <div className="text-gray-500 group-hover:text-gray-400 transition-colors text-sm">
+      <div className="text-gray-600 group-hover:text-gray-700 transition-colors text-sm">
         {isExternal ? 'Visit →' : 'Learn more →'}
       </div>
     </div>
