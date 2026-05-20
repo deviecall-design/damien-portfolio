@@ -18,6 +18,7 @@ export default function Home() {
       description: 'Real-time sensor orchestration and distributed intelligence fusion across heterogeneous networks.',
       tags: ['Distributed Systems', 'Real-time Processing', 'Sensor Fusion'],
       status: 'Production',
+      image: '/press-images/godseye-globe.jpg',
       onLearnMore: () => setActiveModal('gods-eye')
     },
     {
@@ -36,6 +37,7 @@ export default function Home() {
       description: 'Distributed sensor mesh for real-time physiological monitoring. Research initiative in partnership with leading medical institutions.',
       tags: ['AI Research', 'Healthcare Tech', 'Distributed Sensors'],
       status: 'Research',
+      image: '/press-images/echo-hero.jpg',
       onLearnMore: () => setActiveModal('ghost-murmur')
     },
     {
@@ -45,6 +47,7 @@ export default function Home() {
       description: 'Custom ontology design and Palantir AIP integrations. Data model architecture for complex operational environments.',
       tags: ['Palantir', 'OSDK', 'Data Architecture'],
       status: 'Production',
+      image: '/press-images/palantir-hospitals-digital-twin.png',
       onLearnMore: () => setActiveModal('foundry-work')
     },
     {
