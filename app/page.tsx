@@ -19,6 +19,7 @@ export default function Home() {
       tags: ['Distributed Systems', 'Real-time Processing', 'Sensor Fusion'],
       status: 'Production',
       image: '/press-images/godseye-globe.jpg',
+      imagePosition: '50% 65%',
       onLearnMore: () => setActiveModal('gods-eye')
     },
     {
@@ -39,6 +40,7 @@ export default function Home() {
       tags: ['AI Research', 'Healthcare Tech', 'Distributed Sensors'],
       status: 'Research',
       image: '/press-images/echo-hero.jpg',
+      imagePosition: 'center bottom',
       onLearnMore: () => setActiveModal('ghost-murmur')
     },
     {

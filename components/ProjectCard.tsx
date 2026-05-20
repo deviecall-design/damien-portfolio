@@ -9,6 +9,7 @@ export interface ProjectCardProps {
   status: 'Production' | 'Active' | 'Research' | 'Commercial'
   link?: string
   image?: string
+  imagePosition?: string
   onLearnMore?: () => void
 }
 
@@ -27,6 +28,7 @@ export function ProjectCard({
   status,
   link,
   image,
+  imagePosition,
   onLearnMore,
 }: ProjectCardProps) {
   const isExternal = link && link.startsWith('http')
@@ -41,7 +43,7 @@ export function ProjectCard({
     <div className="h-full border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-all bg-white group cursor-pointer flex flex-col">
       {image && (
         <div className="w-full h-48 overflow-hidden bg-gray-100">
-          <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+          <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
         </div>
       )}
       <div className="p-6 flex-1 flex flex-col justify-between">

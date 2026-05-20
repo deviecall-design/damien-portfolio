@@ -11,6 +11,7 @@ const stories = [
     narrative:
       'We built a distributed sensor intelligence platform that fuses data from heterogeneous networks into a single, real-time operational picture. Deployed across NSW emergency response operations — tracking assets, detecting anomalies, and surfacing decisions before humans knew they needed them.',
     image: '/press-images/godseye-globe.jpg',
+    imagePosition: '50% 65%',
     tags: ['Sensor Fusion', 'Distributed Systems', 'Real-time Intelligence'],
     cta: 'Explore →',
     align: 'left',
@@ -89,6 +90,7 @@ export default function WorkPage() {
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                style={story.imagePosition ? { objectPosition: story.imagePosition } : undefined}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
