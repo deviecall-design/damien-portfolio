@@ -57,7 +57,7 @@ const c2Adapter = new LatticeAdapter({
     footerType: 'nda',
   },
   'ghost-murmur': {
-    title: 'Ghost Murmur',
+    title: 'Ember Echo',
     tagline: 'Applied Cardiac AI Research',
     body: 'Distributed sensor mesh for real-time physiological monitoring and cardiac diagnostics. Applied research initiative in partnership with leading medical institutions. Combines edge AI inference with centralized model management for clinical-grade accuracy.',
     snippet: `// Distributed inference pipeline

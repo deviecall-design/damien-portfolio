@@ -32,7 +32,7 @@ export default function Home() {
     },
     {
       id: 'ghost-murmur',
-      title: 'Ghost Murmur',
+      title: 'Ember Echo',
       tagline: 'Applied Cardiac AI Research',
       description: 'Distributed sensor mesh for real-time physiological monitoring. Research initiative in partnership with leading medical institutions.',
       tags: ['AI Research', 'Healthcare Tech', 'Distributed Sensors'],
