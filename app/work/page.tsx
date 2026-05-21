@@ -10,7 +10,7 @@ const stories = [
     headline: 'When every second counts, blind spots cost lives.',
     narrative:
       'We built a distributed sensor intelligence platform that fuses data from heterogeneous networks into a single, real-time operational picture. Deployed across NSW emergency response operations — tracking assets, detecting anomalies, and surfacing decisions before humans knew they needed them.',
-    image: '/press-images/godseye-globe.jpg',
+    image: '/press-images/godseye-hero.jpg',
     imagePosition: '50% 65%',
     tags: ['Sensor Fusion', 'Distributed Systems', 'Real-time Intelligence'],
     cta: 'Explore →',
@@ -23,7 +23,7 @@ const stories = [
     headline: 'Eight agents. One objective. No supervisor.',
     narrative:
       'A multi-agent swarm orchestration engine built for environments where central control is a liability. Ember coordinates distributed AI agents using consensus protocols — each one autonomous, collectively unstoppable. Designed for operational scenarios where latency and failure tolerance are non-negotiable.',
-    image: '/press-images/ember-hero.jpg',
+    image: '/press-images/ember-anduril-hero.png',
     tags: ['Swarm Intelligence', 'Autonomous Systems', 'Multi-Agent AI'],
     cta: 'Explore →',
     align: 'right',
@@ -35,7 +35,7 @@ const stories = [
     headline: 'Anduril built the platform. We pushed it further.',
     narrative:
       'Custom ontology design and autonomous coordination layer on top of Anduril\'s C2 infrastructure. Built for edge environments where connectivity is intermittent, decisions are irreversible, and latency is measured in milliseconds — not seconds.',
-    image: '/press-images/menace-1-container.jpg',
+    image: '/press-images/lattice-container.jpg',
     tags: ['Anduril', 'Autonomous Coordination', 'Edge AI'],
     cta: 'Explore →',
     align: 'left',
@@ -47,7 +47,7 @@ const stories = [
     headline: 'Australian electricians were quoting blind. Not anymore.',
     narrative:
       'An AI-powered estimating platform that reads electrical plans and generates complete cost estimates in seconds. Live commercial product. Early customers are booking more jobs, reducing quote time by 80%, and winning more bids with margin confidence they\'ve never had before.',
-    image: '/press-images/palantir-hospitals-digital-twin.png',
+    image: '/press-images/electrascan-hero.png',
     tags: ['SaaS', 'AI Estimation', 'Construction Tech'],
     cta: 'Explore →',
     align: 'right',
