@@ -17,7 +17,7 @@ const research: ResearchItem[] = [
     id: 'ghost-murmur',
     title: 'Distributed Sensor Mesh for Real-time Cardiac Monitoring',
     abstract:
-      'Cardiac events aren\'t sudden — they\'re preceded by hours of detectable pre-symptomatic signals. We\'re building systems that detect the signal before the crisis, working with Victor Chang Cardiac Research Institute on edge-based sensor fusion that runs on existing clinical infrastructure. 14-hour early detection window changes intervention from emergency to managed care.\n\nUse case: A patient in remote NSW has ECG, SpO2, and blood pressure monitors at home. Our system detects HRV degradation + SpO2 micro-drift 14 hours before cardiac event. Doctor intervenes. Patient survives.',
+      'Cardiac events aren\'t sudden — they\'re preceded by hours of detectable pre-symptomatic signals. We\'re building systems that detect the signal before the crisis, working with Victor Chang Cardiac Research Institute on edge-based sensor fusion that runs on existing clinical infrastructure. 14-hour early detection window changes intervention from emergency to managed care.\n\nReal-world: A patient in rural Australia has ECG and SpO2 monitors. Standard systems see normal vitals. Ours detects HRV micro-degradation + blood pressure drift 14 hours before cardiac event onset. Early warning reaches clinician. Intervention happens before crisis.',
     tags: ['Healthcare', 'Distributed Systems', 'Edge AI', 'Medical'],
     date: '2026 (In Progress)',
     status: 'research',
@@ -27,7 +27,7 @@ const research: ResearchItem[] = [
     id: 'mirofish',
     title: 'Swarm Intelligence Models for Market Sentiment Prediction',
     abstract:
-      'Markets move on consensus — but consensus is invisible until it\'s priced in. We model how investor behavior aggregates across information asymmetry, macro catalysts, and herd dynamics. Validated against Fed decisions, earnings surprises, geopolitical shocks. The swarm model catches sentiment shifts 2–4 weeks before traditional market signals surface.\n\nUse case: Fed signals rate cut. Market doesn\'t believe it yet. Our swarm agents detect micro-consensus forming across institutional money flows, social sentiment, and macro fund positioning. We catch the shift 2–4 weeks before it prints on technicals.',
+      'Markets move on consensus — but consensus is invisible until it\'s priced in. We model how investor behavior aggregates across information asymmetry, macro catalysts, and herd dynamics. Validated against Fed decisions, earnings surprises, geopolitical shocks. The swarm model catches sentiment shifts 2–4 weeks before traditional market signals surface.\n\nReal-world: Major central bank signals policy shift. Market consensus hasn\'t formed yet. Our swarm protocol detects micro-consensus across fund flows, positioning data, and macro positioning 2–3 weeks before market reprices. Early signal. Actionable window.',
     tags: ['Markets', 'Swarm AI', 'Prediction', 'Consensus'],
     date: '2026 (Research)',
     status: 'research',
@@ -37,7 +37,7 @@ const research: ResearchItem[] = [
     id: 'lattice-arch',
     title: 'Autonomous Coordination at the Edge: Lattice Architecture Integration',
     abstract:
-      'Autonomous systems assume persistent command & control. Defense, emergency response, and edge computing can\'t afford that. We\'re building autonomous coordination layers where each agent thinks independently but acts in consensus with the swarm. No central authority. No single point of failure. Generalizing battle-tested defense architectures for fire, flood, and search & rescue.\n\nUse case: Bushfire. Comms tower down. Three drone swarms enter fire zone independently. Each sees local fire spread differently. No central command. Swarms negotiate consensus on "which way is the hot zone" and coordinate response without talking to HQ. Humans see the result.',
+      'Autonomous systems assume persistent command & control. Defense, emergency response, and edge computing can\'t afford that. We\'re building autonomous coordination layers where each agent thinks independently but acts in consensus with the swarm. No central authority. No single point of failure. Generalizing battle-tested defense architectures for fire, flood, and search & rescue.\n\nReal-world: 2019-style bushfire event. Comms infrastructure compromised. Multiple response assets enter zone autonomously — thermal, RF, visual sensors. Each sees different fire behavior. Instead of waiting for HQ decision, assets reach local consensus on fire progression and coordinate response in-silo. Humans get aggregated intelligence, not individual feeds.',
     tags: ['Autonomy', 'Edge Computing', 'C2 Systems', 'Architecture'],
     date: '2026 (Research)',
     status: 'research',
@@ -47,7 +47,7 @@ const research: ResearchItem[] = [
     id: 'gods-eye',
     title: 'Real-time Intelligence Fusion Across Heterogeneous Sensor Networks',
     abstract:
-      'Most organizations have sensor networks that don\'t talk to each other. We\'re building consensus protocols that fuse conflicting sensor data into actionable intelligence. Works with existing infrastructure. No sensor replacement required. Operates in contested environments where jamming is expected. Operational awareness in minutes instead of hours — the difference between containment and escalation.\n\nUse case: Search & rescue. NSW has thermal sensors, RF locators, and ground teams. They disagree: thermal says person is in gully, RF says they\'re 500m north. Our fusion layer weights the signals by reliability, environment, and history. Decision: gully is correct, RF is jammed. Rescue team goes there first. Time saved = lives.',
+      'Most organizations have sensor networks that don\'t talk to each other. We\'re building consensus protocols that fuse conflicting sensor data into actionable intelligence. Works with existing infrastructure. No sensor replacement required. Operates in contested environments where jamming is expected. Operational awareness in minutes instead of hours — the difference between containment and escalation.\n\nReal-world: Search & rescue operation. Thermal, RF, ground sensors give conflicting signals about target location. Our fusion algorithm weights by environment (terrain, weather), sensor reliability history, and signal consistency. Consensus emerges in minutes. Rescue dispatch has high-confidence location. Time to rescue window narrows significantly.'
     tags: ['Sensors', 'Fusion', 'Real-time', 'Distributed'],
     date: '2026 (Research)',
     status: 'research',
