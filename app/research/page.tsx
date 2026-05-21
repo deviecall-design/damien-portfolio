@@ -102,9 +102,12 @@ export default function ResearchPage() {
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mt-6">
               <p className="font-semibold text-gray-900 mb-3">Tech Stack:</p>
               <ul className="space-y-2 text-sm">
-                <li><strong>Claude Sonnet</strong> — Research direction, architecture validation, theoretical rigor</li>
-                <li><strong>Codex</strong> — Implementation and prototype development</li>
-                <li><strong>OpenClaw</strong> — Persistent memory, agent orchestration, knowledge continuity</li>
+                <li><strong>Palantir Foundry OSDK</strong> — Data fusion, healthcare patterns, enterprise integration</li>
+                <li><strong>Anduril Lattice</strong> — Autonomous C2 architecture, sensor coordination</li>
+                <li><strong>ROS 2 + PX4</strong> — Professional autonomous platforms, distributed communication</li>
+                <li><strong>EGO-Planner Swarm</strong> — Decentralized trajectory planning, edge coordination</li>
+                <li><strong>FARSITE</strong> — Validated fire spread prediction (USDA open-source)</li>
+                <li><strong>React + Mapbox + Three.js</strong> — Real-time visualization and geospatial mapping</li>
                 <li><strong>Field systems</strong> — Actual hardware: cardiac sensors, distributed mesh networks, autonomous platforms</li>
               </ul>
             </div>
@@ -149,16 +152,12 @@ export default function ResearchPage() {
                 </div>
                 <div className="flex items-center gap-3 ml-4">
                   <span className="text-xs text-gray-600">{item.date}</span>
-                  {item.link ? (
-                    <a
-                      href={item.link}
-                      className="text-gray-600 hover:text-gray-900 text-sm transition-colors font-semibold"
-                    >
-                      Read →
-                    </a>
-                  ) : (
-                    <span className="text-gray-400 text-sm">Coming soon</span>
-                  )}
+                  <a
+                    href={`mailto:ember@research.com?subject=Research%20Inquiry:%20${encodeURIComponent(item.title)}`}
+                    className="text-gray-600 hover:text-gray-900 text-sm transition-colors font-semibold"
+                  >
+                    Learn More →
+                  </a>
                 </div>
               </div>
             </div>
@@ -194,11 +193,23 @@ export default function ResearchPage() {
           </div>
         </div>
 
-        {/* Footer note */}
+        {/* Contact Section */}
         <div className="mt-16 pt-8 border-t border-gray-200">
-          <p className="text-gray-600 text-xs">
-            Additional research available upon request. NDA agreements in place for restricted content.
-          </p>
+          <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">Interested in the Research?</h3>
+            <p className="text-gray-600 mb-4">
+              These initiatives are active and evolving. For technical depth, collaboration inquiries, or partnership discussions:
+            </p>
+            <a
+              href="mailto:ember@research.com"
+              className="inline-block bg-gray-900 text-white px-6 py-2 rounded font-semibold hover:bg-gray-800 transition-colors"
+            >
+              Contact: ember@research.com
+            </a>
+            <p className="text-gray-600 text-xs mt-4">
+              NDA agreements in place for restricted content and proprietary methodologies.
+            </p>
+          </div>
         </div>
       </section>
 
