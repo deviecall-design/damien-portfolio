@@ -34,6 +34,35 @@ export default function Home() {
       onLearnMore: () => setActiveModal('ghost-murmur')
     },
     {
+      id: 'foundry-work',
+      title: 'Foundry & OSDK',
+      tagline: 'Enterprise Data Orchestration',
+      description: 'Custom ontology design and Palantir AIP integrations. Data model architecture for complex operational environments.',
+      tags: ['Palantir', 'OSDK', 'Data Architecture'],
+      status: 'Production',
+      image: '/press-images/palantir-hospitals-digital-twin.png',
+      onLearnMore: () => setActiveModal('foundry-work')
+    },
+    {
+      id: 'ember',
+      title: 'Ember',
+      tagline: 'Multi-Agent Orchestration',
+      description: 'Advanced swarm intelligence and distributed AI agent coordination. Autonomous task execution and knowledge sharing.',
+      tags: ['AI Agents', 'Swarm Intelligence', 'Orchestration'],
+      status: 'Production',
+      image: '/press-images/ember-hero.jpg',
+      onLearnMore: () => setActiveModal('ember')
+    },
+    {
+      id: 'mirofish',
+      title: 'MiroFish',
+      tagline: 'Swarm Intelligence Market Prediction',
+      description: 'Multi-agent swarm simulation for market sentiment prediction. Distributed consensus protocols modeling investor behavior and collective decision-making.',
+      tags: ['Swarm Intelligence', 'Market Analysis', 'Prediction'],
+      status: 'Production',
+      onLearnMore: () => setActiveModal('mirofish')
+    },
+    {
       id: 'electrascan',
       title: 'ElectraScan',
       tagline: 'AI Estimating SaaS for Electrical Contractors',
