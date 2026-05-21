@@ -86,13 +86,46 @@ export default function Home() {
       <Header />
       
       <section className="px-4 sm:px-8 lg:px-16 py-20 max-w-6xl mx-auto">
-        <div className="mb-16">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
-            Founder and operator<br />building ventures that ship.
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl">
-            Running four in-flight plays — AI defense infrastructure, cardiac detection, electrical SaaS, and recovery products. Exiting corporate this year to go full-time on the portfolio.
-          </p>
+        <div className="mb-16 space-y-8">
+          <div>
+            <h1 className="text-5xl sm:text-6xl font-bold mb-4 leading-tight">
+              Founder and operator building ventures that ship.
+            </h1>
+            <p className="text-lg text-gray-700 max-w-3xl">
+              No large team. Just me, Claude Sonnet, Codex, and OpenClaw running 24/7. Building AI defense infrastructure, cardiac detection, electrical SaaS, recovery products. Exiting corporate this year.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-3">Why Founder, Not Corporate</h2>
+            <p className="text-gray-600 max-w-3xl">
+              Corporate scales people. Ventures scale ideas. I wear every hat — product, code, GTM, ops. When I see a problem, I build it. When I ship, I own the outcome. That optionality and velocity beats title and politics. My network is the only moat that matters. Depth over credentials.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-3">Current Ventures</h2>
+            <div className="text-gray-600 max-w-3xl space-y-3">
+              <p><strong>God's Eye:</strong> Global ops intelligence platform for real-time mission-critical tracking across fires, distributed assets, and autonomous deployments. Defense-grade sensor fusion from edge to command.</p>
+              <p><strong>Ember Echo:</strong> Detects pre-symptomatic cardiac signal — up to 14 hours before onset — using ECG, SpO2, HRV, blood pressure, and EHR data. No new hardware required. Healthcare at the speed of ML.</p>
+              <p><strong>ElectraScan:</strong> AI estimating for Australian electricians. Automates Bill of Materials generation and tracks total order value in dollars. Real-time pricing for copper, cable, and commodity-linked materials. SaaS with teeth.</p>
+              <p><strong>PLÉO:</strong> Premium recovery kits for dance athletes. Direct-to-consumer physical product. Built distribution model and unit economics that scale.</p>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-3">What's Next</h2>
+            <p className="text-gray-600 max-w-3xl">
+              Not managing. Leading. High pace. Clear impact. Sharp teams and co-founders who think differently. Open to scaling current ventures or founding the next — depends on the problem and the people. If you're shipping something hard, let's talk.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-3">How I Work</h2>
+            <p className="text-gray-600 max-w-3xl">
+              Full-stack execution. Team scaling from founding to product-market fit. GTM velocity. Extreme bias toward shipping. Better done than perfect. Built with code, design, and AI infrastructure that moves faster than traditional teams.
+            </p>
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
