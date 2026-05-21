@@ -23,16 +23,6 @@ export default function Home() {
       onLearnMore: () => setActiveModal('gods-eye')
     },
     {
-      id: 'lattice-integration',
-      title: 'Lattice Integration',
-      tagline: 'Autonomous Asset Coordination',
-      description: 'Custom ontology and autonomous coordination layer built on Anduril\'s C2 platform. Advanced AIP orchestration.',
-      tags: ['Anduril', 'Autonomous Systems', 'C2 Integration'],
-      status: 'Active',
-      image: '/press-images/menace-1-container.jpg',
-      onLearnMore: () => setActiveModal('lattice-integration')
-    },
-    {
       id: 'ghost-murmur',
       title: 'Ember Echo',
       tagline: 'Cardiac AI / Early Detection',
@@ -79,7 +69,7 @@ export default function Home() {
       description: 'Automates Bill of Materials generation for Australian electricians. Tracks total order value in dollars — not metres. Real-time pricing for copper, cable, and petroleum-linked materials.',
       tags: ['SaaS', 'ML Estimating', 'B2B'],
       status: 'Commercial',
-      image: 'https://zxeznkuodpseijkvjwxa.supabase.co/storage/v1/object/public/portfolio-assets/ventures/electrascan-hero.jpg',
+      image: 'https://zxeznkuodpseijkvjwxa.supabase.co/storage/v1/object/public/portfolio-assets/ventures/gods-eye-hero.jpg',
       imagePosition: '50% 30%',
       onLearnMore: () => setActiveModal('electrascan')
     }
