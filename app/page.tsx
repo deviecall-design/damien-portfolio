@@ -62,6 +62,8 @@ export default function Home() {
       description: 'Multi-agent swarm simulation for market sentiment prediction. Distributed consensus protocols modeling investor behavior and collective decision-making.',
       tags: ['Swarm Intelligence', 'Market Analysis', 'Prediction'],
       status: 'Production',
+      image: '/press-images/mirofish-hero.jpg',
+      imagePosition: 'center center',
       onLearnMore: () => setActiveModal('mirofish')
     },
     {
