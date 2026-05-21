@@ -69,7 +69,7 @@ export default function Home() {
       description: 'Automates Bill of Materials generation for Australian electricians. Tracks total order value in dollars — not metres. Real-time pricing for copper, cable, and petroleum-linked materials.',
       tags: ['SaaS', 'ML Estimating', 'B2B'],
       status: 'Commercial',
-      image: 'https://zxeznkuodpseijkvjwxa.supabase.co/storage/v1/object/public/portfolio-assets/ventures/gods-eye-hero.jpg',
+      image: 'https://zxeznkuodpseijkvjwxa.supabase.co/storage/v1/object/public/portfolio-assets/ventures/electrascan-hero.png',
       imagePosition: '50% 30%',
       onLearnMore: () => setActiveModal('electrascan')
     }
