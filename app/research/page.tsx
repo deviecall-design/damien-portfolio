@@ -17,7 +17,7 @@ const research: ResearchItem[] = [
     id: 'ghost-murmur',
     title: 'Distributed Sensor Mesh for Real-time Cardiac Monitoring',
     abstract:
-      'Cardiac events aren\'t sudden — they\'re preceded by hours of detectable pre-symptomatic signals. We\'re building systems that detect the signal before the crisis, working with Victor Chang Cardiac Research Institute on edge-based sensor fusion that runs on existing clinical infrastructure. 14-hour early detection window changes intervention from emergency to managed care.\n\nReal-world: A patient in rural Australia has ECG and SpO2 monitors. Standard systems see normal vitals. Ours detects HRV micro-degradation + blood pressure drift 14 hours before cardiac event onset. Early warning reaches clinician. Intervention happens before crisis.',
+      'Cardiac events aren\'t sudden — they\'re preceded by hours of detectable pre-symptomatic signals. We\'re building AI-native sensor fusion systems that detect the signal before the crisis, leveraging proven clinical data patterns and edge inference for real-time analysis. 14-hour early detection window changes intervention from emergency to managed care.\n\nReal-world: A patient in rural Australia has ECG, SpO2, and blood pressure monitors at home. Standard systems see normal vitals. Ours detects HRV micro-degradation + blood pressure drift 14 hours before cardiac event onset. Early warning reaches clinician. Intervention happens before crisis. Aligns with Palantir\'s proven healthcare data patterns.',
     tags: ['Healthcare', 'Distributed Systems', 'Edge AI', 'Medical'],
     date: '2026 (In Progress)',
     status: 'research',
@@ -94,10 +94,10 @@ export default function ResearchPage() {
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">Research</h1>
           <div className="max-w-3xl space-y-6 text-gray-600">
             <p className="text-lg leading-relaxed">
-              I'm not publishing papers. I'm solving real problems with AI-first architectures that operate at the edge, where latency kills and human oversight isn't always possible.
+              I'm not publishing papers. I'm solving real problems with AI-first architectures that operate at the edge, where latency kills and human oversight isn't always possible. Building systems that leverage proven patterns from leading platforms (Palantir, Anduril) and adapt them for civil applications.
             </p>
             <p className="text-lg leading-relaxed">
-              <strong>The thesis:</strong> Distributed intelligence — sensor fusion, autonomous coordination, real-time consensus — works better when it's designed for <em>constraint</em>, not capacity. Most AI research assumes unlimited compute and connectivity. My work assumes the opposite: edge devices, intermittent networks, irreversible decisions, and millisecond latencies.
+              <strong>The thesis:</strong> Distributed intelligence — sensor fusion, autonomous coordination, real-time consensus — works better when it's designed for <em>constraint</em>, not capacity. Most AI research assumes unlimited compute and connectivity. My work assumes the opposite: edge devices, intermittent networks, irreversible decisions, and millisecond latencies. We apply battle-tested architecture patterns to healthcare, emergency response, and market intelligence.
             </p>
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mt-6">
               <p className="font-semibold text-gray-900 mb-3">Tech Stack:</p>
