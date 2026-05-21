@@ -17,7 +17,7 @@ const research: ResearchItem[] = [
     id: 'ghost-murmur',
     title: 'Distributed Sensor Mesh for Real-time Cardiac Monitoring',
     abstract:
-      'Applied research on distributed sensor networks enabling edge inference for cardiac diagnostics. Partnership with Victor Chang Cardiac Research Institute.',
+      'Cardiac events aren\'t sudden — they\'re preceded by hours of detectable pre-symptomatic signals. We\'re building systems that detect the signal before the crisis, working with Victor Chang Cardiac Research Institute on edge-based sensor fusion that runs on existing clinical infrastructure. 14-hour early detection window changes intervention from emergency to managed care.',
     tags: ['Healthcare', 'Distributed Systems', 'Edge AI', 'Medical'],
     date: '2026 (In Progress)',
     status: 'research',
@@ -27,7 +27,7 @@ const research: ResearchItem[] = [
     id: 'mirofish',
     title: 'Swarm Intelligence Models for Market Sentiment Prediction',
     abstract:
-      'Multi-agent consensus protocols for predicting investor behavior and market reactions to macro events. Validated against historical catalysts and earnings releases.',
+      'Markets move on consensus — but consensus is invisible until it\'s priced in. We model how investor behavior aggregates across information asymmetry, macro catalysts, and herd dynamics. Validated against Fed decisions, earnings surprises, geopolitical shocks. The swarm model catches sentiment shifts 2–4 weeks before traditional market signals surface.',
     tags: ['Markets', 'Swarm AI', 'Prediction', 'Consensus'],
     date: '2026 (Research)',
     status: 'research',
@@ -37,7 +37,7 @@ const research: ResearchItem[] = [
     id: 'lattice-arch',
     title: 'Autonomous Coordination at the Edge: Lattice Architecture Integration',
     abstract:
-      'Custom ontology design and autonomous decision-making on Anduril C2 platform. Edge computing patterns for real-time coordination without centralized control.',
+      'Autonomous systems assume persistent command & control. Defense, emergency response, and edge computing can\'t afford that. We\'re building autonomous coordination layers where each agent thinks independently but acts in consensus with the swarm. No central authority. No single point of failure. Generalizing battle-tested defense architectures for fire, flood, and search & rescue.',
     tags: ['Autonomy', 'Edge Computing', 'C2 Systems', 'Architecture'],
     date: '2026 (Research)',
     status: 'research',
@@ -47,7 +47,7 @@ const research: ResearchItem[] = [
     id: 'gods-eye',
     title: 'Real-time Intelligence Fusion Across Heterogeneous Sensor Networks',
     abstract:
-      'Distributed consensus protocols for high-confidence data fusion. Application: operational awareness across emergency response networks.',
+      'Most organizations have sensor networks that don\'t talk to each other. We\'re building consensus protocols that fuse conflicting sensor data into actionable intelligence. Works with existing infrastructure. No sensor replacement required. Operates in contested environments where jamming is expected. Operational awareness in minutes instead of hours — the difference between containment and escalation.',
     tags: ['Sensors', 'Fusion', 'Real-time', 'Distributed'],
     date: '2026 (Research)',
     status: 'research',
@@ -92,9 +92,23 @@ export default function ResearchPage() {
         {/* Hero */}
         <div className="mb-20">
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">Research</h1>
-          <p className="text-xl text-gray-600 max-w-2xl">
-            Applied research and investigations into distributed systems, autonomous coordination, and advanced AI architectures.
-          </p>
+          <div className="max-w-3xl space-y-6 text-gray-600">
+            <p className="text-lg leading-relaxed">
+              I'm not publishing papers. I'm solving real problems with AI-first architectures that operate at the edge, where latency kills and human oversight isn't always possible.
+            </p>
+            <p className="text-lg leading-relaxed">
+              <strong>The thesis:</strong> Distributed intelligence — sensor fusion, autonomous coordination, real-time consensus — works better when it's designed for <em>constraint</em>, not capacity. Most AI research assumes unlimited compute and connectivity. My work assumes the opposite: edge devices, intermittent networks, irreversible decisions, and millisecond latencies.
+            </p>
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mt-6">
+              <p className="font-semibold text-gray-900 mb-3">Tech Stack:</p>
+              <ul className="space-y-2 text-sm">
+                <li><strong>Claude Sonnet</strong> — Research direction, architecture validation, theoretical rigor</li>
+                <li><strong>Codex</strong> — Implementation and prototype development</li>
+                <li><strong>OpenClaw</strong> — Persistent memory, agent orchestration, knowledge continuity</li>
+                <li><strong>Field systems</strong> — Actual hardware: cardiac sensors, distributed mesh networks, autonomous platforms</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/* Research Items Grid */}
