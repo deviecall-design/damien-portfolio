@@ -18,8 +18,8 @@ export default function Home() {
       description: 'Real-time global ops platform for mission-critical environments. Live tracking across fires, distributed assets, and autonomous drone deployments. Defense-grade sensor fusion from edge to command.',
       tags: ['Distributed Systems', 'Real-time Processing', 'Sensor Fusion'],
       status: 'Production',
-      image: 'https://zxeznkuodpseijkvjwxa.supabase.co/storage/v1/object/public/portfolio-assets/ventures/gods-eye-hero.jpg',
-      imagePosition: '50% 65%',
+      image: '/press-images/godseye-hero.jpg',
+      imagePosition: '50% 50%',
       onLearnMore: () => setActiveModal('gods-eye')
     },
     {
@@ -29,9 +29,40 @@ export default function Home() {
       description: 'Detects the pre-symptomatic cardiac signal — up to 14 hours before onset. Runs on existing clinical data: ECG, SpO2, HRV, blood pressure, EHR. No new hardware required.',
       tags: ['AI Research', 'Healthcare Tech', 'Distributed Sensors'],
       status: 'Research',
-      image: 'https://zxeznkuodpseijkvjwxa.supabase.co/storage/v1/object/public/portfolio-assets/ventures/ember-echo-hero.png',
-      imagePosition: 'center top',
+      image: '/press-images/ember-echo-hero.jpg',
+      imagePosition: 'center center',
       onLearnMore: () => setActiveModal('ghost-murmur')
+    },
+    {
+      id: 'foundry-work',
+      title: 'Foundry & OSDK',
+      tagline: 'Enterprise Data Orchestration',
+      description: 'Custom ontology design and Palantir AIP integrations. Data model architecture for complex operational environments.',
+      tags: ['Palantir', 'OSDK', 'Data Architecture'],
+      status: 'Production',
+      image: '/press-images/palantir-hospitals-digital-twin.png',
+      imagePosition: 'center center',
+      onLearnMore: () => setActiveModal('foundry-work')
+    },
+    {
+      id: 'ember',
+      title: 'Ember',
+      tagline: 'Multi-Agent Orchestration',
+      description: 'Advanced swarm intelligence and distributed AI agent coordination. Autonomous task execution and knowledge sharing.',
+      tags: ['AI Agents', 'Swarm Intelligence', 'Orchestration'],
+      status: 'Production',
+      image: '/press-images/ember-anduril-hero.png',
+      imagePosition: 'center center',
+      onLearnMore: () => setActiveModal('ember')
+    },
+    {
+      id: 'mirofish',
+      title: 'MiroFish',
+      tagline: 'Swarm Intelligence Market Prediction',
+      description: 'Multi-agent swarm simulation for market sentiment prediction. Distributed consensus protocols modeling investor behavior and collective decision-making.',
+      tags: ['Swarm Intelligence', 'Market Analysis', 'Prediction'],
+      status: 'Production',
+      onLearnMore: () => setActiveModal('mirofish')
     },
     {
       id: 'electrascan',
@@ -40,7 +71,7 @@ export default function Home() {
       description: 'Automates Bill of Materials generation for Australian electricians. Tracks total order value in dollars — not metres. Real-time pricing for copper, cable, and petroleum-linked materials.',
       tags: ['SaaS', 'ML Estimating', 'B2B'],
       status: 'Commercial',
-      image: 'https://zxeznkuodpseijkvjwxa.supabase.co/storage/v1/object/public/portfolio-assets/ventures/electrascan-hero.png',
+      image: '/press-images/electrascan-hero.png',
       imagePosition: '50% 30%',
       onLearnMore: () => setActiveModal('electrascan')
     }
