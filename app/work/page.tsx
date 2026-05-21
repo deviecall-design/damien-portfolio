@@ -9,7 +9,7 @@ const stories = [
     title: "God's Eye",
     headline: 'When every second counts, blind spots cost lives.',
     narrative:
-      'NSW emergency response was operating in the dark. During major incidents — fires, floods, multi-asset coordination — field teams had no unified view of the operational landscape. Decisions that needed to happen in minutes were taking hours. We built a distributed sensor intelligence platform that fuses data from heterogeneous networks into a single, real-time operational picture. The platform tracks assets, detects anomalies, and surfaces critical decisions before humans even knew they needed them. Result: emergency response teams reduced incident assessment time from hours to minutes, enabling faster resource allocation and potentially saving lives.'
+      'NSW emergency response was operating in the dark. During major incidents — fires, floods, multi-asset coordination — field teams had no unified view of the operational landscape. Decisions that needed to happen in minutes were taking hours. We built a distributed sensor intelligence platform that fuses data from heterogeneous networks into a single, real-time operational picture. The platform tracks assets, detects anomalies, and surfaces critical decisions before humans even knew they needed them. Result: emergency response teams reduced incident assessment time from hours to minutes, enabling faster resource allocation and potentially saving lives.',
     image: '/press-images/godseye-hero.jpg',
     imagePosition: '50% 65%',
     tags: ['Sensor Fusion', 'Distributed Systems', 'Real-time Intelligence'],
@@ -22,7 +22,7 @@ const stories = [
     title: 'Ember',
     headline: 'Eight agents. One objective. No supervisor.',
     narrative:
-      'In denied environments — areas without reliable comms infrastructure — centralized control falls apart. Traditional command-and-control systems rely on constant contact with a supervisor. We built Ember, a multi-agent swarm orchestration engine that throws that assumption away. Ember coordinates distributed AI agents using pure consensus protocols, with no central authority. Each agent is fully autonomous, makes its own decisions, and the collective achieves complex objectives without ever checking in with a human. Impact: decentralized decision-making at scale, even when communications are jammed, severed, or unavailable.'
+      'In denied environments — areas without reliable comms infrastructure — centralized control falls apart. Traditional command-and-control systems rely on constant contact with a supervisor. We built Ember, a multi-agent swarm orchestration engine that throws that assumption away. Ember coordinates distributed AI agents using pure consensus protocols, with no central authority. Each agent is fully autonomous, makes its own decisions, and the collective achieves complex objectives without ever checking in with a human. Impact: decentralized decision-making at scale, even when communications are jammed, severed, or unavailable.',
     image: '/press-images/ember-anduril-hero.png',
     tags: ['Swarm Intelligence', 'Autonomous Systems', 'Multi-Agent AI'],
     cta: 'Explore →',
@@ -34,7 +34,7 @@ const stories = [
     title: 'Lattice Integration',
     headline: 'Anduril built the platform. We pushed it further.',
     narrative:
-      'Anduril built a powerful command-and-control platform. We pushed it further. The challenge: edge environments where connectivity is intermittent, decisions are irreversible, and latency is measured in milliseconds. We designed a custom ontology and autonomous coordination layer that sits on top of their C2 infrastructure, enabling real-time decision-making without waiting for network conditions to be perfect. The system can operate autonomously when disconnected and re-synchronize intelligently when contact is restored. Impact: autonomous coordination in the harshest operational environments — where humans cannot be present and milliseconds determine outcomes.'
+      'Anduril built a powerful command-and-control platform. We pushed it further. The challenge: edge environments where connectivity is intermittent, decisions are irreversible, and latency is measured in milliseconds. We designed a custom ontology and autonomous coordination layer that sits on top of their C2 infrastructure, enabling real-time decision-making without waiting for network conditions to be perfect. The system can operate autonomously when disconnected and re-synchronize intelligently when contact is restored. Impact: autonomous coordination in the harshest operational environments — where humans cannot be present and milliseconds determine outcomes.',
     image: '/press-images/lattice-container.jpg',
     tags: ['Anduril', 'Autonomous Coordination', 'Edge AI'],
     cta: 'Explore →',
@@ -46,7 +46,7 @@ const stories = [
     title: 'ElectraScan',
     headline: 'Australian electricians were quoting blind. Not anymore.',
     narrative:
-      'Australian electricians were trapped in an analog workflow: reading printed plans by hand, manually calculating labor and materials, writing estimates on the job. It was slow, error-prone, and cost them bids. ElectraScan solves this with AI that reads electrical plans instantly and generates complete, accurate cost estimates in seconds. The platform is live and in commercial production. Early customers are reporting 80% reduction in quote time, significantly higher bid conversion rates, and genuine margin confidence — a metric they\'ve never had before. Impact: electricians can quote faster, bid more often, and win more work.'
+      'Australian electricians were trapped in an analog workflow: reading printed plans by hand, manually calculating labor and materials, writing estimates on the job. It was slow, error-prone, and cost them bids. ElectraScan solves this with AI that reads electrical plans instantly and generates complete, accurate cost estimates in seconds. The platform is live and in commercial production. Early customers are reporting 80% reduction in quote time, significantly higher bid conversion rates, and genuine margin confidence — a metric they\'ve never had before. Impact: electricians can quote faster, bid more often, and win more work.',
     image: '/press-images/electrascan-hero.png',
     tags: ['SaaS', 'AI Estimation', 'Construction Tech'],
     cta: 'Explore →',
