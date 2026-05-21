@@ -4,6 +4,13 @@ const nextConfig = {
   swcMinify: true,
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'zxeznkuodpseijkvjwxa.supabase.co',
+        pathname: '/storage/v1/object/public/**',
+      },
+    ],
   },
   typescript: {
     ignoreBuildErrors: true,

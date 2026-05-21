@@ -14,11 +14,11 @@ export default function Home() {
     {
       id: 'gods-eye',
       title: 'God\'s Eye',
-      tagline: 'Full-Spectrum Operational Awareness',
-      description: 'Real-time sensor orchestration and distributed intelligence fusion across heterogeneous networks.',
+      tagline: 'Global Ops Intelligence Platform',
+      description: 'Real-time global ops platform for mission-critical environments. Live tracking across fires, distributed assets, and autonomous drone deployments. Defense-grade sensor fusion from edge to command.',
       tags: ['Distributed Systems', 'Real-time Processing', 'Sensor Fusion'],
       status: 'Production',
-      image: '/press-images/godseye-globe.jpg',
+      image: 'https://zxeznkuodpseijkvjwxa.supabase.co/storage/v1/object/public/portfolio-assets/ventures/gods-eye-hero.jpg',
       imagePosition: '50% 65%',
       onLearnMore: () => setActiveModal('gods-eye')
     },
@@ -35,12 +35,12 @@ export default function Home() {
     {
       id: 'ghost-murmur',
       title: 'Ember Echo',
-      tagline: 'Applied Cardiac AI Research',
-      description: 'Distributed sensor mesh for real-time physiological monitoring. Research initiative in partnership with leading medical institutions.',
+      tagline: 'Cardiac AI / Early Detection',
+      description: 'Detects the pre-symptomatic cardiac signal — up to 14 hours before onset. Runs on existing clinical data: ECG, SpO2, HRV, blood pressure, EHR. No new hardware required.',
       tags: ['AI Research', 'Healthcare Tech', 'Distributed Sensors'],
       status: 'Research',
-      image: '/press-images/echo-hero.jpg',
-      imagePosition: 'center bottom',
+      image: 'https://zxeznkuodpseijkvjwxa.supabase.co/storage/v1/object/public/portfolio-assets/ventures/ember-echo-hero.png',
+      imagePosition: 'center top',
       onLearnMore: () => setActiveModal('ghost-murmur')
     },
     {
@@ -75,10 +75,12 @@ export default function Home() {
     {
       id: 'electrascan',
       title: 'ElectraScan',
-      tagline: 'AI Cost Estimating SaaS',
-      description: 'Machine learning-powered cost estimation for electrical contracting. Live commercial product for Australian market.',
+      tagline: 'AI Estimating SaaS for Electrical Contractors',
+      description: 'Automates Bill of Materials generation for Australian electricians. Tracks total order value in dollars — not metres. Real-time pricing for copper, cable, and petroleum-linked materials.',
       tags: ['SaaS', 'ML Estimating', 'B2B'],
       status: 'Commercial',
+      image: 'https://zxeznkuodpseijkvjwxa.supabase.co/storage/v1/object/public/portfolio-assets/ventures/electrascan-hero.jpg',
+      imagePosition: '50% 30%',
       onLearnMore: () => setActiveModal('electrascan')
     }
   ]
@@ -92,10 +94,10 @@ export default function Home() {
       <section className="px-4 sm:px-8 lg:px-16 py-20 max-w-6xl mx-auto">
         <div className="mb-16">
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
-            Advanced AI Systems <br />& Distributed Architecture
+            Founder and operator<br />building ventures that ship.
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl">
-            Enterprise-grade platforms for autonomous coordination, real-time intelligence, and distributed AI orchestration.
+            Running four in-flight plays — AI defense infrastructure, cardiac detection, electrical SaaS, and recovery products. Exiting corporate this year to go full-time on the portfolio.
           </p>
         </div>
 
