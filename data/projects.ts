@@ -160,22 +160,13 @@ export const projects: Project[] = [
   {
     slug: 'electrascan',
     title: 'ElectraScan',
-    problem:
-      'AI estimating for Australian electricians: bills of materials and order value.',
+    problem: 'AI-powered electrical estimating from drawings.',
     theme: 'tools',
     stack: [],
-    status: null,
-    comingSoon: true,
-    image: {
-      src: '/press-images/electrascan-hero.png',
-      alt: 'ElectraScan interface showing a variation report.',
-      caption: 'Interface screenshot. Product status to be confirmed.',
-    },
-    linkPublic: false,
-    story: [
-      'AI estimating for Australian electricians. It automates bill of materials generation and tracks order value in dollars rather than only in length. Pricing covers copper, cable, and petroleum-linked materials.',
-      'Details coming soon on status and a public address. An earlier domain link did not resolve and has been removed.',
-    ],
+    status: 'Demo',
+    liveUrl: 'https://electrascan-app.vercel.app/dashboard',
+    linkPublic: true,
+    story: ['AI-powered electrical estimating from drawings.'],
   },
   {
     slug: 'ares',
