@@ -26,7 +26,20 @@ export function ProjectLinks({
             Case study
           </Link>
         ) : null}
-        {project.linkPublic && liveLabel ? (
+        {project.linkPublic && project.publicLinks && project.publicLinks.length > 0 ? (
+          project.publicLinks.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-pine underline decoration-pine/40 underline-offset-4 hover:decoration-pine"
+            >
+              {item.label}
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          ))
+        ) : project.linkPublic && liveLabel ? (
           <a
             href={project.liveUrl}
             target="_blank"

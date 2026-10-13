@@ -49,6 +49,7 @@ interface ProjectBase {
   researchQuestion?: string
   linkCaution?: string
   comingSoon?: boolean
+  publicLinks?: { label: string; href: string }[]
 }
 
 export type Project = ProjectBase &
@@ -121,6 +122,10 @@ export const projects: Project[] = [
     },
     liveUrl: 'https://god-eye-nu.vercel.app/',
     linkPublic: true,
+    publicLinks: [
+      { label: 'Command centre', href: 'https://dashboard-xi-five-11.vercel.app/' },
+      { label: "God's Eye view", href: 'https://god-eye-nu.vercel.app/' },
+    ],
     linkCaution: 'Simulated data, not an operational system.',
     story: [
       "A simulated dashboard for drone and asset operations. The same work has also been called God's Eye.",
