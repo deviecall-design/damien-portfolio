@@ -1,27 +1,36 @@
 import Link from 'next/link'
+import { Nav } from '@/components/Nav'
+import { site } from '@/data/site'
 
 export function Header() {
   return (
-    <header className="border-b border-gray-200 bg-white/80 backdrop-blur">
-      <div className="px-4 sm:px-8 lg:px-16 py-6 max-w-6xl mx-auto">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-8">
-            <Link href="/" className="text-lg font-bold hover:text-gray-700 transition-colors">
-              DC
-            </Link>
-            <nav className="hidden md:flex gap-8 text-sm text-gray-600">
-              <a href="/work" className="hover:text-gray-900 transition-colors">Work</a>
-              <a href="/research" className="hover:text-gray-900 transition-colors">Research</a>
-            </nav>
-          </div>
-          <div className="flex items-center gap-4 text-sm">
-            <a href="https://www.linkedin.com/in/damiencallaghan/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+    <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-md">
+      <div className="mx-auto flex max-w-page flex-col gap-1 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <Link href="/" className="font-serif text-[1.45rem] leading-none tracking-tight">
+          {site.name}
+        </Link>
+        <div className="flex flex-wrap items-center gap-x-6">
+          <Nav />
+          <nav aria-label="Contact" className="flex gap-4 text-sm">
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center text-ink-muted hover:text-ink"
+            >
               LinkedIn
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
-            <a href="https://github.com/deviecall-design" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <a
+              href={site.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center text-ink-muted hover:text-ink"
+            >
               GitHub
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
-          </div>
+          </nav>
         </div>
       </div>
     </header>
