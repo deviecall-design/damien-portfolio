@@ -1,149 +1,126 @@
-'use client'
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { PageMain } from '@/components/PageMain'
+import { ProjectCard } from '@/components/ProjectCard'
+import { featuredProjects } from '@/data/projects'
+import { site } from '@/data/site'
 
-import { useState } from 'react'
-import { ProjectCard, type ProjectCardProps } from '@/components/ProjectCard'
-import { ProjectModal } from '@/components/ProjectModal'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import { modalContents } from '@/lib/modalContent'
+export const metadata: Metadata = {
+  title: `${site.name} — Designer-engineer`,
+  description: `${site.role} ${site.description}`,
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: `${site.name} — Designer-engineer`,
+    description: `${site.role} ${site.description}`,
+    url: '/',
+  },
+}
 
-export default function Home() {
-  const [activeModal, setActiveModal] = useState<string | null>(null)
+const principles = [
+  {
+    title: 'Design and engineering',
+    body: 'The prototypes are drawn and built as products, from the interface through to a working demo.',
+  },
+  {
+    title: 'Plain status',
+    body: 'Each lab card says whether the work is a demo, a simulation, parked, private, or still only screenshots.',
+  },
+  {
+    title: 'Open to roles',
+    body: 'AI product and engineering roles, and conversations about the prototypes themselves.',
+  },
+]
 
-  const projects: ProjectCardProps[] = [
-    {
-      id: 'gods-eye',
-      title: 'God\'s Eye',
-      tagline: 'Global Ops Intelligence Platform',
-      description: 'Real-time global ops platform for mission-critical environments. Live tracking across fires, distributed assets, and autonomous drone deployments. Defense-grade sensor fusion from edge to command.',
-      tags: ['Distributed Systems', 'Real-time Processing', 'Sensor Fusion'],
-      status: 'Production',
-      image: '/press-images/godseye-hero.jpg',
-      imagePosition: '50% 50%',
-      onLearnMore: () => setActiveModal('gods-eye')
-    },
-    {
-      id: 'ghost-murmur',
-      title: 'Ember Echo',
-      tagline: 'Cardiac AI / Early Detection',
-      description: 'Detects the pre-symptomatic cardiac signal — up to 14 hours before onset. Runs on existing clinical data: ECG, SpO2, HRV, blood pressure, EHR. No new hardware required.',
-      tags: ['AI Research', 'Healthcare Tech', 'Distributed Sensors'],
-      status: 'Research',
-      image: '/press-images/ember-echo-hero.jpg',
-      imagePosition: 'center center',
-      onLearnMore: () => setActiveModal('ghost-murmur')
-    },
-    {
-      id: 'foundry-work',
-      title: 'Foundry & OSDK',
-      tagline: 'Enterprise Data Orchestration',
-      description: 'Custom ontology design and Palantir AIP integrations. Data model architecture for complex operational environments.',
-      tags: ['Palantir', 'OSDK', 'Data Architecture'],
-      status: 'Production',
-      image: '/press-images/palantir-hospitals-digital-twin.png',
-      imagePosition: 'center center',
-      onLearnMore: () => setActiveModal('foundry-work')
-    },
-    {
-      id: 'ember',
-      title: 'Ember',
-      tagline: 'Multi-Agent Orchestration',
-      description: 'Advanced swarm intelligence and distributed AI agent coordination. Autonomous task execution and knowledge sharing.',
-      tags: ['AI Agents', 'Swarm Intelligence', 'Orchestration'],
-      status: 'Production',
-      image: '/press-images/ember-anduril-hero.png',
-      imagePosition: 'center center',
-      onLearnMore: () => setActiveModal('ember')
-    },
-    {
-      id: 'mirofish',
-      title: 'MiroFish',
-      tagline: 'Swarm Intelligence Market Prediction',
-      description: 'Multi-agent swarm simulation for market sentiment prediction. Distributed consensus protocols modeling investor behavior and collective decision-making.',
-      tags: ['Swarm Intelligence', 'Market Analysis', 'Prediction'],
-      status: 'Production',
-      image: '/press-images/mirofish-hero.jpg',
-      imagePosition: 'center center',
-      onLearnMore: () => setActiveModal('mirofish')
-    },
-    {
-      id: 'electrascan',
-      title: 'ElectraScan',
-      tagline: 'AI Estimating SaaS for Electrical Contractors',
-      description: 'Automates Bill of Materials generation for Australian electricians. Tracks total order value in dollars — not metres. Real-time pricing for copper, cable, and petroleum-linked materials.',
-      tags: ['SaaS', 'ML Estimating', 'B2B'],
-      status: 'Commercial',
-      image: '/press-images/electrascan-hero.png',
-      imagePosition: '50% 30%',
-      onLearnMore: () => setActiveModal('electrascan')
-    }
-  ]
-
-  const activeContent = activeModal ? modalContents[activeModal] : null
+export default function HomePage() {
+  const featured = featuredProjects()
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-      <Header />
-      
-      <section className="px-4 sm:px-8 lg:px-16 py-20 max-w-6xl mx-auto">
-        <div className="mb-16 space-y-8">
-          <div>
-            <h1 className="text-5xl sm:text-6xl font-bold mb-4 leading-tight">
-              Founder and operator building ventures that ship.
-            </h1>
-            <p className="text-lg text-gray-700 max-w-3xl">
-              No large team. Just me, Claude Sonnet, Codex, and OpenClaw running 24/7. Building AI defense infrastructure, cardiac detection, electrical SaaS, recovery products. Exiting corporate this year.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-bold mb-3">Why Founder, Not Corporate</h2>
-            <p className="text-gray-600 max-w-3xl">
-              Corporate scales people. Ventures scale ideas. I wear every hat — product, code, GTM, ops. When I see a problem, I build it. When I ship, I own the outcome. That optionality and velocity beats title and politics. My network is the only moat that matters. Depth over credentials.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-bold mb-3">Current Ventures</h2>
-            <div className="text-gray-600 max-w-3xl space-y-3">
-              <p><strong>God's Eye:</strong> Global ops intelligence platform for real-time mission-critical tracking across fires, distributed assets, and autonomous deployments. Defense-grade sensor fusion from edge to command.</p>
-              <p><strong>Ember Echo:</strong> Detects pre-symptomatic cardiac signal — up to 14 hours before onset — using ECG, SpO2, HRV, blood pressure, and EHR data. No new hardware required. Healthcare at the speed of ML.</p>
-              <p><strong>ElectraScan:</strong> AI estimating for Australian electricians. Automates Bill of Materials generation and tracks total order value in dollars. Real-time pricing for copper, cable, and commodity-linked materials. SaaS with teeth.</p>
-              <p><strong>PLÉO:</strong> Premium recovery kits for dance athletes. Direct-to-consumer physical product. Built distribution model and unit economics that scale.</p>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-bold mb-3">What's Next</h2>
-            <p className="text-gray-600 max-w-3xl">
-              Not managing. Leading. High pace. Clear impact. Sharp teams and co-founders who think differently. Open to scaling current ventures or founding the next — depends on the problem and the people. If you're shipping something hard, let's talk.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-bold mb-3">How I Work</h2>
-            <p className="text-gray-600 max-w-3xl">
-              Full-stack execution. Team scaling from founding to product-market fit. GTM velocity. Extreme bias toward shipping. Better done than perfect. Built with code, design, and AI infrastructure that moves faster than traditional teams.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
-          ))}
+    <PageMain>
+      <section className="mx-auto max-w-page px-5 pb-8 pt-16 sm:px-8 sm:pt-24">
+        <p className="text-xs font-medium uppercase tracking-[0.18em] text-pine">Portfolio</p>
+        <h1 className="mt-4 max-w-4xl font-serif text-[clamp(2.8rem,7vw,5.4rem)] leading-[0.98] tracking-tight">
+          Designer-engineer
+          <span className="block italic text-pine">building AI products.</span>
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
+          I design and build proofs of concept, and I label what is real. The lab collects that
+          work across health, geospatial systems, fintech, and sport. {site.openTo}
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link
+            href="/lab"
+            className="inline-flex min-h-11 items-center rounded-full bg-pine px-5 text-sm font-medium text-paper hover:bg-pine-deep"
+          >
+            Browse the lab
+          </Link>
+          <a
+            href={site.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center rounded-full border border-line bg-[#fffcf7] px-5 text-sm font-medium hover:border-ink"
+          >
+            LinkedIn
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
         </div>
       </section>
 
-      <Footer />
+      <section className="mx-auto max-w-page px-5 py-12 sm:px-8" aria-labelledby="selected-heading">
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <h2 id="selected-heading" className="font-serif text-3xl tracking-tight sm:text-4xl">
+            Selected proofs
+          </h2>
+          <Link href="/lab" className="text-sm underline decoration-line underline-offset-4 hover:text-pine">
+            All proofs
+          </Link>
+        </div>
+        <ul className="grid gap-5 md:grid-cols-2">
+          {featured.map((project) => (
+            <li key={project.slug} className="h-full">
+              <ProjectCard project={project} />
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 text-sm leading-relaxed text-ink-soft">
+          Also in the lab:{' '}
+          <Link href="/lab/matakite" className="underline decoration-line underline-offset-4 hover:text-pine">
+            Matakite
+          </Link>
+          ,{' '}
+          <Link href="/lab/electrascan" className="underline decoration-line underline-offset-4 hover:text-pine">
+            ElectraScan
+          </Link>
+          , and{' '}
+          <Link href="/lab/ares" className="underline decoration-line underline-offset-4 hover:text-pine">
+            Ares
+          </Link>
+          .
+        </p>
+      </section>
 
-      {activeContent && activeModal && (
-        <ProjectModal
-          content={activeContent}
-          projectId={activeModal}
-          onClose={() => setActiveModal(null)}
-        />
-      )}
-    </main>
+      <section className="mx-auto max-w-page px-5 py-8 sm:px-8" aria-labelledby="pleo-heading">
+        <div className="rounded-2xl border border-line bg-[#fffcf7] px-6 py-8 sm:px-8">
+          <p className="text-xs font-medium uppercase tracking-[0.16em] text-ink-muted">Physical product</p>
+          <h2 id="pleo-heading" className="mt-3 font-serif text-4xl tracking-tight">
+            PLÉO
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">{site.pleo}</p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-page px-5 py-12 sm:px-8" aria-labelledby="work-heading">
+        <h2 id="work-heading" className="font-serif text-3xl tracking-tight sm:text-4xl">
+          How I work
+        </h2>
+        <ul className="mt-8 grid gap-8 md:grid-cols-3">
+          {principles.map((item) => (
+            <li key={item.title} className="border-t border-line pt-4">
+              <h3 className="font-serif text-2xl tracking-tight">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.body}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </PageMain>
   )
 }

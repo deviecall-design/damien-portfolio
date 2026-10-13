@@ -1,23 +1,14 @@
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+})
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'zxeznkuodpseijkvjwxa.supabase.co',
-        pathname: '/storage/v1/object/public/**',
-      },
-    ],
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
+    formats: ['image/avif', 'image/webp'],
   },
 }
 
-module.exports = nextConfig
+module.exports = withMDX(nextConfig)
