@@ -30,6 +30,7 @@ const allowedUrls = new Set([
   'https://echo-oncology.vercel.app/eagleeye-guided',
   'https://ember-echo-research-k29u.bolt.host/',
   'https://electrascan-app.vercel.app/dashboard',
+  'https://god-eye-nu.vercel.app/',
   'https://www.linkedin.com/in/damiencallaghan/',
   'https://github.com/deviecall-design',
   'https://damien-portfolio-tau.vercel.app',

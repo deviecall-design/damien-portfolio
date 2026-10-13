@@ -119,10 +119,12 @@ export const projects: Project[] = [
       alt: 'Several quadcopter drones on the ground. Not a live feed from the dashboard.',
       caption: 'Reference photo. Not a live dashboard.',
     },
-    linkPublic: false,
+    liveUrl: 'https://god-eye-nu.vercel.app/',
+    linkPublic: true,
+    linkCaution: 'Simulated data, not an operational system.',
     story: [
       "A simulated dashboard for drone and asset operations. The same work has also been called God's Eye.",
-      'There is no public URL yet, and no live sensor feed. Earlier wording on this site described a field outcome for emergency teams. That claim has been removed.',
+      'Simulated data, not an operational system.',
     ],
     researchQuestion:
       'What belongs in a geospatial picture of drone operations when the scene is simulated and nothing is live?',
