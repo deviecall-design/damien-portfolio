@@ -1,98 +1,69 @@
 import Link from 'next/link'
-
-export interface ProjectCardProps {
-  id: string
-  title: string
-  tagline: string
-  description: string
-  tags: string[]
-  status: 'Production' | 'Active' | 'Research' | 'Commercial'
-  link?: string
-  image?: string
-  imagePosition?: string
-  onLearnMore?: () => void
-}
-
-const statusColors = {
-  Production: 'bg-emerald-100 text-emerald-800',
-  Active: 'bg-blue-100 text-blue-800',
-  Research: 'bg-purple-100 text-purple-800',
-  Commercial: 'bg-amber-100 text-amber-800',
-}
+import { themeLabels, type Project } from '@/data/projects'
+import { HealthNote } from './HealthNote'
+import { ProjectImage } from './ProjectImage'
+import { ProjectLinks } from './ProjectLinks'
+import { StatusBadge } from './StatusBadge'
 
 export function ProjectCard({
-  title,
-  tagline,
-  description,
-  tags,
-  status,
-  link,
-  image,
-  imagePosition,
-  onLearnMore,
-}: ProjectCardProps) {
-  const isExternal = link && link.startsWith('http')
-  
-  const handleClick = () => {
-    if (onLearnMore) {
-      onLearnMore()
-    }
-  }
-
-  const baseContent = (
-    <div className="h-full border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-all bg-white group cursor-pointer flex flex-col">
-      {image && (
-        <div className="w-full h-48 overflow-hidden bg-gray-100">
-          <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
-        </div>
-      )}
-      <div className="p-6 flex-1 flex flex-col justify-between">
-        <div>
-          <div className="flex items-start justify-between mb-4">
-            <div className="flex-1">
-              <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-gray-700 transition-colors">
-                {title}
-              </h3>
-              <p className="text-sm text-gray-500 mb-4">
-                {tagline}
-              </p>
-            </div>
-            <span className={`text-xs font-mono px-3 py-1 rounded whitespace-nowrap ml-2 ${statusColors[status]}`}>
-              {status}
-            </span>
-          </div>
-
-          <p className="text-gray-600 text-sm leading-relaxed mb-4">
-            {description}
-          </p>
-
-          <div className="flex flex-wrap gap-2 mb-6">
-            {tags.map((tag) => (
-              <span key={tag} className="text-xs px-2 py-1 rounded bg-gray-100 text-gray-600 border border-gray-200">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="text-gray-400 group-hover:text-gray-700 transition-colors text-sm">
-          {isExternal ? 'Visit →' : 'Learn more →'}
-        </div>
-      </div>
-    </div>
-  )
-
-  if (isExternal) {
-    return (
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        {baseContent}
-      </a>
-    )
-  }
+  project,
+  headingLevel = 'h2',
+}: {
+  project: Project
+  headingLevel?: 'h2' | 'h3'
+}) {
+  const Title = headingLevel
+  const studyHref = `/lab/${project.slug}`
 
   return (
-    <button onClick={handleClick} className="w-full text-left">
-      {baseContent}
-    </button>
+    <article id={project.slug} className="flex h-full scroll-mt-24 flex-col overflow-hidden rounded-2xl border border-line bg-card">
+      <div className="relative">
+        {project.image ? (
+          <ProjectImage
+            image={project.image}
+            crop
+            sizes="(min-width: 1024px) 540px, (min-width: 640px) 50vw, 100vw"
+          />
+        ) : (
+          <div className="flex aspect-[16/10] items-center justify-center bg-[#ebe6de] px-6 text-center text-sm text-muted">
+            Screenshot to be added
+          </div>
+        )}
+        <div className="absolute left-3 top-3 max-w-[calc(100%-1.5rem)]">
+          <StatusBadge status={project.status} />
+        </div>
+      </div>
+
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        {project.theme ? (
+          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
+            {themeLabels[project.theme]}
+          </p>
+        ) : null}
+        <Title className="mt-2 font-serif text-[1.7rem] leading-tight tracking-[-0.02em] text-ink">
+          <Link href={studyHref} className="hover:underline">
+            {project.title}
+          </Link>
+        </Title>
+        {project.aka ? <p className="mt-1 text-sm text-muted">{project.aka}</p> : null}
+        <p className="mt-3 text-sm leading-relaxed text-muted">{project.problem}</p>
+        {project.healthDisclaimer ? <HealthNote className="mt-4" /> : null}
+        {project.stack.length > 0 ? (
+          <ul aria-label="Stack" className="mt-4 flex flex-wrap gap-2">
+            {project.stack.map((tag) => (
+              <li key={tag} className="rounded-full border border-line px-2.5 py-1 text-xs text-ink">
+                {tag}
+              </li>
+            ))}
+          </ul>
+        ) : null}
+        {project.honestyNote ? (
+          <p className="mt-4 text-xs leading-relaxed text-muted">{project.honestyNote}</p>
+        ) : null}
+        <div className="mt-auto pt-5">
+          <ProjectLinks project={project} />
+        </div>
+      </div>
+    </article>
   )
 }
